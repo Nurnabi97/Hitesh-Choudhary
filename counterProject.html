@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter-project</title>
+</head>
+<style>
+    body{
+        background-color: rgb(255, 243, 220);
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .text-body{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 50px; 
+    font-weight: 700;  
+    }
+    .counter{
+        margin-bottom: 20px;
+    }
+
+</style>
+
+<body>
+    <div class="text-body">
+        <div class="counter">00</div>
+        <div class="followers">Followers</div>
+    </div>
+    <script>
+        const counter = document.querySelector(".counter");
+        const follower = document.querySelector(".followers");
+       let count = 1;
+       setInterval(() =>{   //setInterval(function, interval in milliseconds)
+          if(count < 1000){ //when count 1000 stop the counter.
+            count++;
+           counter.innerText = `${count} K`;   //change the innerText of counter.
+          }
+       },1);
+
+       setTimeout(() => {   //seTimeout(function, when do the execution in milliseconds)
+        follower.innerText = "Congratulations!"
+       },5000);
+
+        
+    </script>
+</body>
+
+</html>
